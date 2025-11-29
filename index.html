@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taha Yarijoo - فروشگاه 3D</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+  body{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1600185367469-6e3f87879d3e?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+        background-size:cover;color:#fff;overflow-x:hidden;}
+  .sidebar{height:100%;width:0;position:fixed;top:0;left:0;background:rgba(0,0,0,0.95);
+           overflow-x:hidden;transition:0.5s;padding-top:80px;z-index:1000;}
+  .sidebar a{padding:20px 30px;text-decoration:none;font-size:24px;color:#fff;display:block;transition:0.3s;}
+  .sidebar a:hover{color:#ffcc00;transform:translateX(10px);}
+  .sidebar .closebtn{position:absolute;top:20px;right:25px;font-size:36px;cursor:pointer;}
+  #main{transition:margin-left 0.5s;padding:20px;}
+  .menu-btn{font-size:28px;cursor:pointer;background:rgba(0,0,0,0.6);
+            border:none;color:white;padding:12px 20px;border-radius:8px;position:fixed;
+            top:20px;left:20px;z-index:1001;transition:0.3s;}
+  .menu-btn:hover{background-color:rgba(255,204,0,0.8);color:#000;}
+  h1{text-align:center;margin-top:100px;font-size:52px;text-shadow:3px 3px 12px #000;}
+  .section{background:rgba(0,0,0,0.7);margin:40px auto;padding:30px;max-width:1000px;
+           border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.5);transition:transform 0.5s;}
+  .section:hover{transform:perspective(1000px) rotateY(5deg);}
+  .section h2{text-align:center;margin-bottom:20px;font-size:32px;color:#ffcc00;}
+  .slider{display:flex;overflow-x:auto;scroll-behavior:smooth;gap:20px;padding-bottom:10px;}
+  .slider::-webkit-scrollbar{display:none;}
+  .card{min-width:250px;background:rgba(255,255,255,0.1);border-radius:15px;transition:transform 0.3s;cursor:pointer;}
+  .card img{width:100%;border-radius:15px;}
+  .card:hover{transform:rotateY(15deg) scale(1.05);}
+  .card p{text-align:center;padding:10px;font-size:16px;color:#fff;}
+  .btn-buy{display:block;margin:10px auto;padding:8px 20px;background:#ffcc00;color:#000;
+            border:none;border-radius:8px;font-weight:bold;cursor:pointer;transition:0.3s;}
+  .btn-buy:hover{background:#fff;color:#ffcc00;}
+  .contact{text-align:center;font-size:20px;}
+  @media(max-width:768px){.menu-btn{font-size:24px;padding:10px 16px;}h1{font-size:38px;}}
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <span class="closebtn" onclick="closeNav()">×</span>
+  <a href="#accessories">اکسسوری</a>
+  <a href="#clothes">لباس</a>
+  <a href="#pants">شلوار</a>
+  <a href="#shoes">کفش</a>
+  <a href="#contact">تماس با ما</a>
+</div>
+
+<button class="menu-btn" onclick="openNav()">☰ منو</button>
+
+<div id="main">
+<h1>Taha Yarijoo - فروشگاه 3D</h1>
+
+<div id="accessories" class="section">
+  <h2>اکسسوری</h2>
+  <div class="slider">
+    <div class="card"><img src="https://images.unsplash.com/photo-1580910051075-6c74bce4f90f?auto=format&fit=crop&w=400&q=80" alt="اکسسوری">
+      <p>اکسسوری شیک</p><button class="btn-buy">خرید</button></div>
+  </div>
+</div>
+
+<div id="clothes" class="section">
+  <h2>لباس</h2>
+  <div class="slider">
+    <div class="card"><img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=400&q=80" alt="لباس">
+      <p>پیراهن مد روز</p><button class="btn-buy">خرید</button></div>
+  </div>
+</div>
+
+<div id="pants" class="section">
+  <h2>شلوار</h2>
+  <div class="slider">
+    <div class="card"><img src="https://images.unsplash.com/photo-1602810316032-0630b229f0d1?auto=format&fit=crop&w=400&q=80" alt="شلوار">
+      <p>شلوار جین</p><button class="btn-buy">خرید</button></div>
+  </div>
+</div>
+
+<div id="shoes" class="section">
+  <h2>کفش</h2>
+  <div class="slider">
+    <div class="card"><img src="https://images.unsplash.com/photo-1552346154-50387e3c8b45?auto=format&fit=crop&w=400&q=80" alt="کفش">
+      <p>کتانی راحت</p><button class="btn-buy">خرید</button></div>
+  </div>
+</div>
+
+<div id="contact" class="section contact">
+  <h2>تماس با ما</h2>
+  <p>شماره تماس: 09199921342</p>
+</div>
+</div>
+
+<script>
+function openNav(){document.getElementById("mySidebar").style.width="280px";
+                     document.getElementById("main").style.marginLeft="280px";}
+function closeNav(){document.getElementById("mySidebar").style.width="0";
+                    document.getElementById("main").style.marginLeft="0";}
+</script>
+
+</body>
+</html>
